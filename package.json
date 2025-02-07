@@ -1,0 +1,14 @@
+{
+  "name": "riseonecom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd apps/dashboard && npm run build && cd .. &&  cd admin && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": ""
+}
