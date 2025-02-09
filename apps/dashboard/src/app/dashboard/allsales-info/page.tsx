@@ -8,7 +8,7 @@ function page() {
       <div>
         <div className="p-10">
           <h1 className="text-3xl font-bold text-center">
-            Amazon Dashboard Info
+            All Sales Dashboard Info
           </h1>
         </div>
         <div className="p-10">
