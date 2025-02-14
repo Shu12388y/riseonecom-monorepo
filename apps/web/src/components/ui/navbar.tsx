@@ -1,19 +1,18 @@
-'use client';
+"use client";
 
-import React from "react";
-
+import React, { useState } from "react";
 import Link from "next/link";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
-//   const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false);
 
-//   const toggleNav = () => {
-//     setNav(!nav);
-//   };
+  const toggleNav = () => {
+    setNav(!nav);
+  };
 
   return (
     <>
-      
       {/* Main Navbar */}
       <div className="bg-white shadow-sm relative z-20">
         <nav className="flex items-center justify-between px-4 py-4 md:px-10 lg:px-20 w-full mx-auto">
@@ -25,26 +24,26 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-lg">
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              Home
+              <Link href="/">Home</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              About Us
+              <Link href="/about">About Us</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              Service
+              <Link href="/service">Service</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              Blog
+              <Link href="/blog">Blog</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              Contact
+              <Link href="/contact">Contact</Link>
             </li>
-            <Link prefetch href="/signup">
+            <Link href="/signup">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
                 SignUp
               </li>
             </Link>
-            <Link prefetch href="/login">
+            <Link href="/login">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
                 SignIn
               </li>
@@ -52,49 +51,45 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Menu Toggle */}
-          {/* <div className="md:hidden cursor-pointer" onClick={toggleNav}>
+          <div className="md:hidden cursor-pointer" onClick={toggleNav}>
             {nav ? (
               <AiOutlineClose size={24} className="text-blue-800" />
             ) : (
               <AiOutlineMenu size={24} className="text-blue-800" />
             )}
-          </div> */}
+          </div>
         </nav>
 
         {/* Mobile Menu */}
-        {/* <div
+        <div
           className={`${
-            nav ? "block" : "hidden"
-          } bg-blue-800 text-white fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-6 z-50 transition-transform duration-300`}
+            nav ? "translate-x-0" : "-translate-x-full"
+          } fixed top-0 left-0 w-3/4 sm:w-1/2 h-screen bg-blue-800 text-white flex flex-col items-start p-6 space-y-6 z-50 transition-transform duration-300`}
         >
-          <ul className="text-2xl text-center">
+          <ul className="text-xl w-full">
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              Home
+              <Link href="/" onClick={toggleNav}>Home</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              About Us
+              <Link href="/about" onClick={toggleNav}>About Us</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              Service
+              <Link href="/service" onClick={toggleNav}>Service</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              Blog
+              <Link href="/blog" onClick={toggleNav}>Blog</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              Contact
+              <Link href="/contact" onClick={toggleNav}>Contact</Link>
             </li>
-            <Link prefetch href="/signup">
-              <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-                SignUp
-              </li>
-            </Link>
-            <Link prefetch href="/login">
-              <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-                SignIn
-              </li>
-            </Link>
+            <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
+              <Link href="/signup" onClick={toggleNav}>SignUp</Link>
+            </li>
+            <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
+              <Link href="/login" onClick={toggleNav}>SignIn</Link>
+            </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </>
   );
