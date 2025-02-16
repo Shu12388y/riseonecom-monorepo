@@ -33,17 +33,14 @@ const Navbar = () => {
               <Link href="/service">Service</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
               <Link href="/contact">Contact</Link>
             </li>
-            <Link href="/signup">
+            <Link href="https://riseonecom-monorepo-f9n7.vercel.app/signup">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
                 SignUp
               </li>
             </Link>
-            <Link href="/login">
+            <Link href="https://riseonecom-monorepo-f9n7.vercel.app/">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
                 SignIn
               </li>
@@ -77,16 +74,13 @@ const Navbar = () => {
               <Link href="/service" onClick={toggleNav}>Service</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/blog" onClick={toggleNav}>Blog</Link>
-            </li>
-            <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
               <Link href="/contact" onClick={toggleNav}>Contact</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/signup" onClick={toggleNav}>SignUp</Link>
+              <Link href="https://riseonecom-monorepo-f9n7.vercel.app/signup" onClick={toggleNav}>SignUp</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/login" onClick={toggleNav}>SignIn</Link>
+              <Link href="https://riseonecom-monorepo-f9n7.vercel.app" onClick={toggleNav}>SignIn</Link>
             </li>
           </ul>
         </div>
