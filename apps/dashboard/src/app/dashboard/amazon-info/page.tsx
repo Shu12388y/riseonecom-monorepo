@@ -2,42 +2,47 @@ import React from "react";
 import Statcard from "@/components/ui/statcard";
 import { ChartComponent } from "@/components/ui/barchart";
 
-function page() {
+function Page() {
   return (
-    <div className="flex flex-col items-center w-full">
-      <div>
-        <div className="p-10">
-          <h1 className="text-3xl font-bold text-center">
-            Amazon Dashboard Info
-          </h1>
+    <div className="flex flex-col items-center w-full px-4 md:px-8 lg:px-12">
+      <div className="py-6 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold">
+          Amazon Dashboard Info
+        </h1>
+      </div>
+
+      {/* Platform Sales Overview */}
+      <div className="py-6 w-full">
+        <h2 className="text-xl md:text-2xl font-semibold text-left">
+          Platform Sales Overview
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          <Statcard />
+          <Statcard />
+          <Statcard />
+          <Statcard />
+          <Statcard />
         </div>
-        <div className="p-10">
-          <h2 className="text-2xl font-semibold text-left">
-            Platform Sales Overview
-          </h2>
-          <div className="flex flex-row items-center justify-center gap-10">
-            <Statcard />
-            <Statcard />
-            <Statcard />
-            <Statcard />
-            <Statcard />
+      </div>
+
+      {/* Product Insight Overview */}
+      <div className="py-6 w-full">
+        <h2 className="text-xl md:text-2xl font-semibold text-left">
+          Product Insight Overview
+        </h2>
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Chart */}
+          <div className="w-full lg:w-1/2">
+            <ChartComponent />
           </div>
-        </div>
-        <div className="p-10">
-          <h2 className="text-2xl font-semibold text-left">
-            Product Insight Overview
-          </h2>
-          <div className="flex flex-row gap-10">
-            <div className="w-1/2">
-              <ChartComponent />
-            </div>
-            <div className="grid grid-cols-2 items-center justify-center gap-10">
-              <Statcard />
-              <Statcard />
-              <Statcard />
-              <Statcard />
-              <Statcard />
-            </div>
+
+          {/* Stat Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6 items-center justify-center w-full lg:w-1/2">
+            <Statcard />
+            <Statcard />
+            <Statcard />
+            <Statcard />
+            <Statcard />
           </div>
         </div>
       </div>
@@ -45,4 +50,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
