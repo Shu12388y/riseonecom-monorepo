@@ -10,7 +10,6 @@ export default function ProfilePage() {
               className="rounded-full object-cover"
               src="https://images.pexels.com/photos/17594386/pexels-photo-17594386/free-photo-of-portrait-of-man-with-mustache-and-beard-in-studio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Replace with your profile image
               alt="Profile Picture"
-              layout="fill"
             />
           </div>
           <div className="ml-6">
