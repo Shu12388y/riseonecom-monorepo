@@ -15,10 +15,13 @@ const Navbar = () => {
     <>
       {/* Main Navbar */}
       <div className="bg-white shadow-sm relative z-20">
-        <nav className="flex items-center justify-between px-4 py-4 md:px-10 lg:px-20 w-full mx-auto">
+        <nav className="flex items-center justify-between px-4 py-1 md:px-10 lg:px-20 w-full mx-auto">
           {/* Logo */}
           <div className="flex items-center">
-            <p className="text-2xl font-bold text-blue-800">RiseOn Ecom</p>
+            <Link href="/">
+            <img className="h-44" src="https://smsnvmpoxg.ufs.sh/f/QZbXEAchwtckFxhHAvttscY68LaR7kelgdEV0ABUSmwyMGoI" alt="" />
+            </Link>
+            {/* <p className="text-2xl font-bold text-blue-800">RiseOn Ecom</p> */}
           </div>
 
           {/* Desktop Menu */}

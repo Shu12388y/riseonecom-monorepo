@@ -1,6 +1,6 @@
 import React from "react";
 
-function Statcard() {
+function Statcard({ title, amount }: { title: string; amount: string }) {
   return (
     <div>
       <article className="flex flex-col gap-4 rounded-lg border border-gray-100 bg-white p-6">
@@ -26,16 +26,16 @@ function Statcard() {
         <div>
           <strong className="block text-sm font-medium text-gray-500">
             {" "}
-            Profit{" "}
+            {title}{" "}
           </strong>
 
           <p>
             <span className="text-2xl font-medium text-gray-900">
               {" "}
-              $404.32{" "}
+              {amount}{" "}
             </span>
 
-            <span className="text-xs text-gray-500"> from $240.94 </span>
+           
           </p>
         </div>
       </article>

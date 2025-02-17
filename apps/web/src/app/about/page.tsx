@@ -13,9 +13,19 @@ export default function AboutUs() {
                 About Us
               </h2>
               <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                We are passionate about innovation, technology, and delivering
-                top-notch experiences to our users. Our team thrives on
-                creativity and collaboration to build something extraordinary.
+                At Rise on Ecom, we make it effortless for businesses to
+                transition and thrive in the online marketplace. With our
+                seamless, all-in-one solutions, we empower sellers of all sizes
+                to establish, manage, and grow their online presence without the
+                hassle.
+                <br />
+                <p>
+                  From platform registration and product listings to inventory
+                  optimization and reviews management, we handle the
+                  complexities that often slow down growth. Our expert team
+                  ensures that every step of your digital journey is smooth,
+                  efficient, and tailored to your unique needs.
+                </p>
               </p>
             </div>
           </BackgroundBeamsWithCollision>
@@ -27,9 +37,10 @@ export default function AboutUs() {
             Our Mission
           </h3>
           <p className="mt-3 text-gray-700 dark:text-gray-300">
-            Our mission is to revolutionize the way people interact with
-            technology. We aim to create intuitive, seamless, and visually
-            stunning solutions that enhance everyday life.
+            Our mission is simple: to break down barriers, simplify e-commerce,
+            and help businesses unlock their full potential online. Whether
+            you&apos;re just starting out or looking to scale, we&apos;re here
+            to guide and support you every step of the way.
           </p>
         </div>
 

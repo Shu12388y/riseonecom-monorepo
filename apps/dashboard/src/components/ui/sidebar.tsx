@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
   return (
     <div>
       {/* Hamburger Button (Visible on Small Screens) */}
@@ -110,7 +111,7 @@ function Sidebar() {
                         href="/dashboard/messho-info"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Messho
+                        Meesho
                       </a>
                     </li>
                   </ul>
@@ -150,7 +151,7 @@ function Sidebar() {
                 </details>
               </li>
 
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
@@ -166,7 +167,7 @@ function Sidebar() {
                 >
                   Invoices
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -191,23 +192,26 @@ function Sidebar() {
                   <ul className="mt-2 space-y-1 px-4">
                     <li>
                       <a
-                        href="#"
+                        href="/dashboard/profile"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Details
+                        Profile
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/dashboard/management"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
-                        Security
+                        Manage Keys
                       </a>
                     </li>
                     <li>
                       <button
-                        onClick={() => console.log("Logout")}
+                        onClick={() => {
+                          window.sessionStorage.removeItem("token");
+                          router.push("/")
+                        }}
                         className="w-full text-left rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         Logout
