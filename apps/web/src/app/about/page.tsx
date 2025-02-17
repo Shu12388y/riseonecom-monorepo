@@ -47,22 +47,19 @@ export default function AboutUs() {
         {/* Team Section */}
         <div className="w-full">
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white text-center">
-            Meet the Team
+            Meet the Founder&apos;
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-            {["Alice Johnson", "Bob Smith", "Charlie Brown"].map(
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 items-center justify-center">
+            {["Mr. Anurag Sharma", "Mr. Ritesh Kumar"].map(
               (name, index) => (
                 <div
                   key={index}
                   className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg text-center"
                 >
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4" />
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-300 to-blue-700 rounded-full mb-4" />
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     {name}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Software Engineer
-                  </p>
                 </div>
               )
             )}
@@ -79,8 +76,8 @@ export default function AboutUs() {
             to say hi, feel free to reach out.
           </p>
           <a
-            href="mailto:contact@yourcompany.com"
-            className="mt-4 inline-block px-6 py-3 text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-md hover:opacity-90"
+            href="/contact"
+            className="mt-4 inline-block px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg shadow-md hover:opacity-90"
           >
             Contact Us
           </a>

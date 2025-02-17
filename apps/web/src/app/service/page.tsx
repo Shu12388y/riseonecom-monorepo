@@ -47,15 +47,15 @@ const services = [
 
 const ServicePage = () => {
   return (
-    <section className="text-gray-900 body-font py-12 px-5">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap">
+    <section className="text-gray-900 body-font py-8  px-5">
+      <div className="container px-5  mx-auto flex flex-wrap">
         <div className="flex flex-col w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 text-center">
-            Rise on Ecom Services
+          <h1 className="text-3xl lg:text-5xl font-bold title-font text-gray-900 mb-4 text-center">
+            Riseon Ecom Services
           </h1>
-          <p className="leading-relaxed text-base mx-auto">
+          <p className="leading-relaxed text-base mx-auto font-semibold text-center lg:text-xl">
             We offer a range of services to take your e-commerce business to the
-            next level. From platform registration to social media management,
+            next level. <br />From platform registration to social media management,
             we handle it all.
           </p>
         </div>

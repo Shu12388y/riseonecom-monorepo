@@ -33,10 +33,10 @@ const Navbar = () => {
               <Link href="/about">About Us</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              <Link href="/service">Service</Link>
+              <Link href="/service">Services</Link>
             </li>
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Contact Us</Link>
             </li>
             <Link href="https://riseonecom-monorepo-f9n7.vercel.app/signup">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
