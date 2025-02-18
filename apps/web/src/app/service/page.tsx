@@ -1,4 +1,6 @@
+'use client'
 import React from "react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -47,38 +49,50 @@ const services = [
 
 const ServicePage = () => {
   return (
-    <section className="text-gray-900 body-font py-8  px-5">
-      <div className="container px-5  mx-auto flex flex-wrap">
+    <section className="text-gray-900 body-font py-8 px-5">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="container px-5 mx-auto flex flex-wrap"
+      >
         <div className="flex flex-col w-full mb-20">
-          <h1 className="text-3xl lg:text-5xl font-bold title-font text-gray-900 mb-4 text-center">
-            Riseon Ecom Services
+          <h1 className="text-3xl lg:text-5xl font-bold title-font text-blue-600 mb-4 text-center">
+            Our Service&apos;s
           </h1>
           <p className="leading-relaxed text-base mx-auto font-semibold text-center lg:text-xl">
             We offer a range of services to take your e-commerce business to the
-            next level. <br />From platform registration to social media management,
-            we handle it all.
+            next level. <br />From platform registration to social media
+            management, we handle it all.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex flex-col  items-center gap-6 p-6 rounded-lg shadow-lg bg-white"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center gap-6 p-6 rounded-lg shadow-lg bg-white transition-transform"
             >
-              <img
+              <motion.img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-64 object-cover rounded-lg"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
               />
               <div className="text-center">
                 <h2 className="text-2xl font-semibold mb-3">{service.title}</h2>
                 <p className="text-gray-700">{service.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
