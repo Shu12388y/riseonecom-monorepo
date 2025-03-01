@@ -1,6 +1,8 @@
 import React from "react";
 import Statcard from "@/components/ui/statcard";
 import { ChartComponent } from "@/components/ui/barchart";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const amazonData = [
   { title: "Total Sales", amount: "250" },
@@ -16,7 +18,12 @@ function Page() {
       
       {/* Platform Sales Overview */}
       <div className="w-full max-w-6xl">
+        <div className="flex fle-row items-center justify-between">
         <h2 className="text-2xl font-semibold mb-4">Platform Sales Overview</h2>
+        <Link href='/dashboard/metric/meeshometric'>
+        <Button >View Metric</Button>
+          </Link>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {amazonData.map((ele, index) => (
             <Statcard key={index} title={ele.title} amount={ele.amount} />
