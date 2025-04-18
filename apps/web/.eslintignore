@@ -1,0 +1,13 @@
+# .eslintignore
+# Prisma generated files
+src/generated/**/*
+prisma/client/**/*
+prisma/generated/**/*
+prisma/wasm.js
+
+# Next.js build output
+.next/
+out/
+
+# Node modules
+node_modules/
