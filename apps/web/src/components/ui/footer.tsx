@@ -56,14 +56,6 @@ function Footer() {
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-center">
-                <i className="fas fa-phone-alt mr-2 text-blue-400"></i>
-                +91 9220840792
-              </li>
-              <li className="flex items-center">
-                <i className="fas fa-phone-alt mr-2 text-blue-400"></i>
-                +91 7676986903
-              </li>
-              <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-blue-400"></i>
                 contact@riseonecom.in
               </li>
