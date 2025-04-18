@@ -394,9 +394,9 @@ export default function Home() {
           className="flex flex-col items-center w-full py-10"
         >
           <h1 className="text-4xl text-blue-600 font-bold mb-12 text-center md:text-5xl lg:text-6xl">
-            Our Service&apos;s
+            Our Services
           </h1>
-          <div className="w-1/2">
+          <div className="w-2/3">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               {service.map((service, index) => (
                 <ServiceCard key={index} {...service} />

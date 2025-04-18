@@ -4,38 +4,31 @@ export function AnimatedTestimonial() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "We've been running our family-owned electronics store for over 20 years, and shifting to e-commerce was something we were hesitant about. Rise On Ecom’s marketplace registration and product listing services made the whole process effortless. They helped us expand our reach and grow our business exponentially. The response has been phenomenal!",
+      name: "Ravi Sharma",
+      designation: " Founder of Sharma Electronics",
+      src: "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+       "As a traditional saree business, we always relied on our offline store. But with Rise On Ecom's professional product images and multi-category listings, we’ve been able to showcase our beautiful collection online in a way that feels just as luxurious. Our online sales have increased significantly, and we've gained customers from all over India!",
+      name: "Neha Joshi",
+      designation: "CEO of Divine Sarees",
+      src: "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "The transition from offline to online was overwhelming, especially with GST and financial management. But Rise On Ecom’s team took care of everything for us. They provided detailed advice, and now our finances are in order, and we can focus on growing the business. Their support was invaluable!",
+      name: "Amit Kumar",
+      designation: "Owner of A.K. Ayurvedic Products",
+      src: "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "I had no idea where to start with selling my handmade jewelry online, but Rise On Ecom’s business consultancy and vendor onboarding services were just what we needed. Their team walked us through the entire process, and now we're listed on multiple top marketplaces. It's been a fantastic experience!",
+      name: "Priya Mehta",
+      designation: "Founder of Mehta Creations",
+      src: "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
     },
   ];
 

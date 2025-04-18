@@ -1,14 +1,15 @@
 import React from "react";
+import Link from "next/link";
 function Footer() {
   return (
     <div>
       <footer className="bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-10">
           <div>
             <h2 className="text-lg font-bold mb-4">RiseOn Ecom</h2>
             <p className="text-sm mb-4">
-              Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a
-              lacinia curabitur lacinia mollis.
+              Streamlining your ecommerce journey with expert guidance and
+              technology
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -27,18 +28,13 @@ function Footer() {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <a href="/about" className="hover:text-blue-400">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <a href="/service" className="hover:text-blue-400">
                   Our Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400">
-                  Our Blogs
                 </a>
               </li>
               <li>
@@ -47,42 +43,18 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <a href="/contact" className="hover:text-blue-400">
                   Contact Us
                 </a>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">Recent Posts</h3>
-            <ul className="space-y-4">
-              <li>
-                <div>
-                  <span className="text-xs text-gray-400">April 27, 2024</span>
-                  <a href="#" className="block hover:text-blue-400">
-                    Achieve Goals With Precision & Speed
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span className="text-xs text-gray-400">April 27, 2024</span>
-                  <a href="#" className="block hover:text-blue-400">
-                    Clients Achieve Goals With Precision
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
+        
 
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-center">
-                <i className="fas fa-map-marker-alt mr-2 text-blue-400"></i>
-                6391 Elgin St. Celina, USA
-              </li>
               <li className="flex items-center">
                 <i className="fas fa-phone-alt mr-2 text-blue-400"></i>
                 +91 9220840792
@@ -93,18 +65,20 @@ function Footer() {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-blue-400"></i>
-                infotech@example.com
+                contact@riseonecom.in
               </li>
             </ul>
+            <Link href="/contact">
             <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
               Get A Quote →
             </button>
+            </Link>
           </div>
         </div>
 
         <div className="bg-blue-700 text-center py-4 mt-6">
           <div className="flex justify-between items-center container mx-auto px-4 text-sm">
-            <p>All Rights Reserved.</p>
+            <p>All Rights Reserved.  <a href="https://highoncontent.in">Powered by High On Content</a></p>
             <div className="space-x-4">
               <a href="#" className="hover:text-blue-300">
                 Terms & Condition
