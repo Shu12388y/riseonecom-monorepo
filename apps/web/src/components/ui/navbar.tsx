@@ -74,7 +74,7 @@ const Navbar = () => {
               <Link href="/about" onClick={toggleNav}>About Us</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/service" onClick={toggleNav}>Service</Link>
+              <Link href="/service" onClick={toggleNav}>Services</Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
               <Link href="/contact" onClick={toggleNav}>Contact</Link>
