@@ -25,7 +25,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 text-lg">
+          <ul className="hidden lg:flex items-center gap-8 text-lg">
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
               <Link href="/">Home</Link>
             </li>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden cursor-pointer" onClick={toggleNav}>
+          <div className="lg:hidden cursor-pointer" onClick={toggleNav}>
             {nav ? (
               <AiOutlineClose size={24} className="text-blue-800" />
             ) : (
