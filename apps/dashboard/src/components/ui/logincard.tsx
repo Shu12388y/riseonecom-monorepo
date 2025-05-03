@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export function LoginForm({
   className,
@@ -32,24 +33,37 @@ export function LoginForm({
     setLoading(true);
 
     try {
-      const res = await fetch("/api/auth/signin", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data: formData }),
+      const res = await axios.post("/api/auth/signin", {
+        data: formData,
       });
 
-      const result = await res.json();
-      
-      if (res.ok) {
+      const result = res.data;
+
+      if (res.status === 200) {
         window.sessionStorage.setItem("token", result.token);
         toast.success("Login successful! Redirecting...");
-        router.push("/dashboard"); // Redirect after login
+        router.push("/dashboard");
       } else {
-        toast.error(result.message || "Login failed");
+        if (res.status === 403) {
+          console.log(res);
+          alert(`You don't have any active plan`);
+        }
+        toast.error(`Error ${res.status}: ${result.message || "Login failed"}`);
       }
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error:any) {
+      if (error.status == 403) {
+        alert("You not have any active plan");
+        window.location.replace(
+          `${process.env.NEXT_PUBLIC_DOMAIN}/plans/${error.response.data.data}`
+        );
+      }
+      if(error.status === 404){
+        alert(`You have not created an account`)
+        window.location.replace(`${process.env.NEXT_PUBLIC_DOMAIN}/getstarted`)
+      }
+      console.error("Network or unexpected error:", error);
+      toast.error("An unexpected error occurred. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -101,13 +115,10 @@ export function LoginForm({
               <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? "Logging in..." : "Login"}
               </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
-              </Button>
             </div>
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{" "}
-              <a href="/signup" className="underline underline-offset-4">
+              <a href={`${process.env.NEXT_PUBLIC_DOMAIN}/getstarted`} className="underline underline-offset-4">
                 Sign up
               </a>
             </div>

@@ -24,7 +24,9 @@ export async function POST(request: NextRequest) {
       text: message,
     };
 
-    transporter.sendMail(mailOptions);
+    transporter.sendMail(mailOptions,()=>{
+      console.log("sended")
+    });
 
     return NextResponse.json({ success: true }, { status: 201 });
   } catch (error) {

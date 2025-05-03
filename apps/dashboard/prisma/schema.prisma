@@ -14,8 +14,29 @@ datasource db {
 }
 
 model User {
-  id       String @id @unique @default(cuid())
-  username String
-  email    String @unique
-  password String
+  id           String    @id @unique @default(cuid())
+  name         String
+  businessName String
+  email        String    @unique
+  password     String
+  subscribed   Boolean   @default(false)
+  plan         String?
+  additionPlans String?
+  startingDate DateTime?
+  expiryDate   DateTime?
+  Status       String?
+  createdAt    DateTime  @default(now())
 }
+
+model PaymentInfo {
+  id                String @unique @default(cuid())
+  userid            String 
+  orderCreationId   String @unique
+  razorpayPaymentId String
+  razorpayOrderId   String
+  razorpaySignature String
+  status            String @default("Authorized")
+}
+
+
+

@@ -9,7 +9,6 @@ export const runtime = "nodejs";
 export const POST = async (request: Request) => {
   try {
     const { data } = await request.json();
-
     if (!data || !data.email || !data.password) {
       return NextResponse.json(
         { message: "Email and password are required" },
@@ -32,6 +31,10 @@ export const POST = async (request: Request) => {
         { message: "Invalid credentials" },
         { status: 401 }
       );
+    }
+
+    if (!user.subscribed) {
+      return NextResponse.json({message:"No active plan",data:user.id},{status:403});
     }
 
     // Generate JWT Token

@@ -19,7 +19,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-            <img className="h-44" src="https://smsnvmpoxg.ufs.sh/f/QZbXEAchwtckFxhHAvttscY68LaR7kelgdEV0ABUSmwyMGoI" alt="" />
+              <img
+                className="h-36"
+                src="https://smsnvmpoxg.ufs.sh/f/QZbXEAchwtckFxhHAvttscY68LaR7kelgdEV0ABUSmwyMGoI"
+                alt=""
+              />
             </Link>
             {/* <p className="text-2xl font-bold text-blue-800">RiseOn Ecom</p> */}
           </div>
@@ -38,14 +42,9 @@ const Navbar = () => {
             <li className="text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200">
               <Link href="/contact">Contact Us</Link>
             </li>
-            <Link href="https://dashboard.riseonecom.in/signup">
+            <Link href="/getstarted">
               <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
-                SignUp
-              </li>
-            </Link>
-            <Link href="https://dashboard.riseonecom.in">
-              <li className="text-white bg-blue-600 px-4 py-2 cursor-pointer rounded-md hover:bg-blue-700 transition-colors duration-200">
-                SignIn
+                Get Started
               </li>
             </Link>
           </ul>
@@ -68,22 +67,37 @@ const Navbar = () => {
         >
           <ul className="text-xl w-full">
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/" onClick={toggleNav}>Home</Link>
+              <Link href="/" onClick={toggleNav}>
+                Home
+              </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/about" onClick={toggleNav}>About Us</Link>
+              <Link href="/about" onClick={toggleNav}>
+                About Us
+              </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/service" onClick={toggleNav}>Services</Link>
+              <Link href="/service" onClick={toggleNav}>
+                Services
+              </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="/contact" onClick={toggleNav}>Contact</Link>
+              <Link href="/contact" onClick={toggleNav}>
+                Contact
+              </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="https://dashboard.riseonecom.in/signup" onClick={toggleNav}>SignUp</Link>
+              <Link
+                href="https://dashboard.riseonecom.in/signup"
+                onClick={toggleNav}
+              >
+                SignUp
+              </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
-              <Link href="https://dashboard.riseonecom.in" onClick={toggleNav}>SignIn</Link>
+              <Link href="https://dashboard.riseonecom.in" onClick={toggleNav}>
+                SignIn
+              </Link>
             </li>
           </ul>
         </div>
