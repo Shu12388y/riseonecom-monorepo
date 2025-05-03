@@ -88,10 +88,10 @@ const Navbar = () => {
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
               <Link
-                href="https://dashboard.riseonecom.in/signup"
+                href="/getstarted"
                 onClick={toggleNav}
               >
-                SignUp
+                Get Started
               </Link>
             </li>
             <li className="py-3 hover:text-blue-300 cursor-pointer transition-colors duration-200">
