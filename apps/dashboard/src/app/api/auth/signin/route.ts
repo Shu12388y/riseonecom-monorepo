@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/utils/db";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { cookies } from 'next/headers'
 
 // Ensure this API runs in the Node.js runtime (not Edge)
 export const runtime = "nodejs";
@@ -44,21 +45,18 @@ export const POST = async (request: Request) => {
       { expiresIn: "7d" }
     );
 
-    const response = NextResponse.json(
+    await cookies().set({
+      name:"token",
+      value:token,
+      httpOnly:true,
+      path:'/'
+    });
+
+    return NextResponse.json(
       { message: "Login successful", user },
       { status: 200 }
     );
 
-    // Store token in HttpOnly cookie
-    response.cookies.set("token", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
-      path: "/",
-      maxAge: 7 * 24 * 60 * 60, // 7 days
-    });
-
-    return response;
   } catch (error) {
     console.error("Error during signin:", error);
     return NextResponse.json(
