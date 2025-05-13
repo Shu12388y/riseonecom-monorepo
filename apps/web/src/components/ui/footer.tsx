@@ -72,11 +72,14 @@ function Footer() {
           <div className="flex justify-between items-center container mx-auto px-4 text-sm">
             <p>All Rights Reserved.  <a href="https://highoncontent.in">Powered by High On Content</a></p>
             <div className="space-x-4">
-              <a href="#" className="hover:text-blue-300">
+              <a href="/termsandconditions" className="hover:text-blue-300">
                 Terms & Condition
               </a>
-              <a href="#" className="hover:text-blue-300">
+              <a href="/privacypolicy" className="hover:text-blue-300">
                 Privacy Policy
+              </a>
+              <a href="/cancellationandrefund" className="hover:text-blue-300">
+                Cancellation and Refund
               </a>
             </div>
           </div>
